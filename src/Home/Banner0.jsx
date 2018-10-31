@@ -2,7 +2,6 @@ import React from 'react';
 import { Button, Icon } from 'antd';
 import QueueAnim from 'rc-queue-anim';
 import TweenOne from 'rc-tween-one';
-import OverPack from 'rc-scroll-anim/lib/ScrollOverPack';
 
 class Banner extends React.PureComponent {
   render() {
@@ -23,9 +22,9 @@ class Banner extends React.PureComponent {
               /\.(svg|gif|jpg|jpeg|png|JPG|PNG|GIF|JPEG)$/
             ) ? (
               <img src={dataSource.title.children} width="100%" alt="img" />
-            ) : (
-              dataSource.title.children
-            )}
+              ) : (
+                dataSource.title.children
+              )}
           </div>
           <div key="content" {...dataSource.content}>
             {dataSource.content.children}

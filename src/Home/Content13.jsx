@@ -17,14 +17,13 @@ class Content13 extends React.PureComponent {
           delay={[0, 100]}
           {...dataSource.titleWrapper}
         >
-          {dataSource.titleWrapper.children.map((item, i) =>
-            React.createElement(
-              item.name.indexOf('title') === 0 ? 'h1' : 'div',
-              { key: i.toString(), ...item },
-              item.children.match(/\.(svg|gif|jpg|jpeg|png|JPG|PNG|GIF|JPEG)$/)
-                ? React.createElement('img', { src: item.children, alt: 'img' })
-                : item.children
-            )
+          {dataSource.titleWrapper.children.map((item, i) => React.createElement(
+            item.name.indexOf('title') === 0 ? 'h1' : 'div',
+            { key: i.toString(), ...item },
+            item.children.match(/\.(svg|gif|jpg|jpeg|png|JPG|PNG|GIF|JPEG)$/)
+              ? React.createElement('img', { src: item.children, alt: 'img' })
+              : item.children
+          )
           )}
         </QueueAnim>
       </OverPack>

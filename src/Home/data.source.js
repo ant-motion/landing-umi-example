@@ -1,4 +1,5 @@
 import React from 'react';
+
 export const Nav00DataSource = {
   wrapper: { className: 'header0 home-page-wrapper' },
   page: { className: 'home-page' },
@@ -139,7 +140,8 @@ export const Content70DataSource = {
                 <br />
                 <h3>
                   开放
-                </h3>符合金融及要求的安全可靠、高可用、高性能的服务能力，符合金融及要求的安全可靠、高可用、高性能的服务能力。
+                </h3>
+                符合金融及要求的安全可靠、高可用、高性能的服务能力，符合金融及要求的安全可靠、高可用、高性能的服务能力。
               </span>
             ),
           },
@@ -179,7 +181,8 @@ export const Content70DataSource = {
                 <br />
                 <h3>
                   开放
-                </h3>符合金融及要求的安全可靠、高可用、高性能的服务能力，符合金融及要求的安全可靠、高可用、高性能的服务能力。
+                </h3>
+                符合金融及要求的安全可靠、高可用、高性能的服务能力，符合金融及要求的安全可靠、高可用、高性能的服务能力。
               </span>
             ),
           },
@@ -219,7 +222,8 @@ export const Content70DataSource = {
                 <br />
                 <h3>
                   开放
-                </h3>符合金融及要求的安全可靠、高可用、高性能的服务能力，符合金融及要求的安全可靠、高可用、高性能的服务能力。
+                </h3>
+                符合金融及要求的安全可靠、高可用、高性能的服务能力，符合金融及要求的安全可靠、高可用、高性能的服务能力。
               </span>
             ),
           },
@@ -358,8 +362,11 @@ export const Footer00DataSource = {
     className: 'copyright',
     children: (
       <span>
-        ©2018 <a href="https://motion.ant.design">Ant Motion</a> All Rights
-        Reserved
+        ©2018
+        {' '}
+        <a href="https://motion.ant.design">Ant Motion</a>
+        {' '}
+        All Rights Reserved
       </span>
     ),
   },
