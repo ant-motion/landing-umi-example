@@ -15,7 +15,9 @@
     "rc-scroll-anim": "^2.5.6",
     "rc-texty": "^0.2.0",
     "rc-tween-one": "^2.2.14",
-    "react-sublime-video": "^0.2.5"
+    "react-sublime-video": "^0.2.5",
+    "react": "^16.6.0",
+    "react-dom": "^16.6.0"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
@@ -30,8 +32,6 @@
     "eslint-plugin-react": "^7.4.0",
     "eslint-tinker": "^0.4.1",
     "pre-commit": "1.x",
-    "react": "^16.6.0",
-    "react-dom": "^16.6.0",
     "stylelint": "^9.4.0",
     "stylelint-config-prettier": "^4.0.0",
     "stylelint-config-standard": "^18.0.0",
