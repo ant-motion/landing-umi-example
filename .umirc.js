@@ -6,5 +6,8 @@ export default {
         antd: true,
       }
     ],
-  ]
+  ],
+  targets: {
+    ie: 11,
+  },
 }
