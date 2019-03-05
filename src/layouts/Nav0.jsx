@@ -2,6 +2,7 @@ import React from 'react';
 import { findDOMNode } from 'react-dom';
 import TweenOne from 'rc-tween-one';
 import { Menu } from 'antd';
+import NavLink from 'umi/navlink';
 
 const Item = Menu.Item;
 
@@ -32,13 +33,13 @@ class Header extends React.Component {
     const navData = dataSource.Menu.children;
     const navChildren = Object.keys(navData).map((key, i) => (
       <Item key={i.toString()} {...navData[key]}>
-        <a
+        <NavLink
           {...navData[key].a}
-          href={navData[key].a.href}
+          to={navData[key].a.href}
           target={navData[key].a.target}
         >
           {navData[key].a.children}
-        </a>
+        </NavLink>
       </Item>
     ));
     return (
