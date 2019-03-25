@@ -5,7 +5,8 @@
     "start": "umi dev",
     "build": "umi build",
     "lint": "eslint --ext .jsx src && tnpm run lint:style",
-    "lint:style": "stylelint \"src/Home/**/*.less\" --syntax less"
+    "lint:style": "stylelint \"src/Home/**/*.less\" --syntax less",
+    "gh-pages": "gh-pages -d dist"
   },
   "dependencies": {
     "antd": "^3.10.3",
@@ -31,6 +32,7 @@
     "eslint-plugin-markdown": "^1.0.0-beta.6",
     "eslint-plugin-react": "^7.4.0",
     "eslint-tinker": "^0.4.1",
+    "gh-pages": "^2.0.1",
     "pre-commit": "1.x",
     "stylelint": "^9.4.0",
     "stylelint-config-prettier": "^4.0.0",
