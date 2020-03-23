@@ -1,46 +1,75 @@
 import React from 'react';
-import { findDOMNode } from 'react-dom';
 import TweenOne from 'rc-tween-one';
 import { Menu } from 'antd';
+import { getChildrenToRender } from './utils';
 
-const Item = Menu.Item;
+const { Item, SubMenu } = Menu;
 
 class Header extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      phoneOpen: false,
-      menuHeight: 0,
+      phoneOpen: undefined,
     };
   }
 
   phoneClick = () => {
-    const menu = findDOMNode(this.menu);
     const phoneOpen = !this.state.phoneOpen;
     this.setState({
       phoneOpen,
-      menuHeight: phoneOpen ? menu.scrollHeight : 0,
     });
   };
 
   render() {
-    const { ...props } = this.props;
-    const { dataSource, isMobile } = props;
-    delete props.dataSource;
-    delete props.isMobile;
-    const { menuHeight, phoneOpen } = this.state;
+    const { dataSource, isMobile, ...props } = this.props;
+    const { phoneOpen } = this.state;
     const navData = dataSource.Menu.children;
-    const navChildren = Object.keys(navData).map((key, i) => (
-      <Item key={i.toString()} {...navData[key]}>
-        <a
-          {...navData[key].a}
-          href={navData[key].a.href}
-          target={navData[key].a.target}
-        >
-          {navData[key].a.children}
-        </a>
-      </Item>
-    ));
+    const navChildren = navData.map((item) => {
+      const { children: a, subItem, ...itemProps } = item;
+      if (subItem) {
+        return (
+          <SubMenu
+            key={item.name}
+            {...itemProps}
+            title={(
+              <div
+                {...a}
+                className={`header0-item-block ${a.className}`.trim()}
+              >
+                {a.children.map(getChildrenToRender)}
+              </div>
+            )}
+            popupClassName="header0-item-child"
+          >
+            {subItem.map(($item, ii) => {
+              const { children: childItem } = $item;
+              const child = childItem.href ? (
+                <a {...childItem}>
+                  {childItem.children.map(getChildrenToRender)}
+                </a>
+              ) : (
+                <div {...childItem}>
+                  {childItem.children.map(getChildrenToRender)}
+                </div>
+              );
+              return (
+                <Item key={$item.name || ii.toString()} {...$item}>
+                  {child}
+                </Item>
+              );
+            })}
+          </SubMenu>
+        );
+      }
+      return (
+        <Item key={item.name} {...itemProps}>
+          <a {...a} className={`header0-item-block ${a.className}`.trim()}>
+            {a.children.map(getChildrenToRender)}
+          </a>
+        </Item>
+      );
+    });
+    const moment = phoneOpen === undefined ? 300 : null;
     return (
       <TweenOne
         component="header"
@@ -72,16 +101,27 @@ class Header extends React.Component {
           )}
           <TweenOne
             {...dataSource.Menu}
-            animation={{ x: 30, type: 'from', ease: 'easeOutQuad' }}
-            ref={(c) => {
-              this.menu = c;
-            }}
-            style={isMobile ? { height: menuHeight } : null}
+            animation={
+              isMobile
+                ? {
+                  height: 0,
+                  duration: 300,
+                  onComplete: (e) => {
+                    if (this.state.phoneOpen) {
+                      e.target.style.height = 'auto';
+                    }
+                  },
+                  ease: 'easeInOutQuad',
+                }
+                : null
+            }
+            moment={moment}
+            reverse={!!phoneOpen}
           >
             <Menu
               mode={isMobile ? 'inline' : 'horizontal'}
-              defaultSelectedKeys={['0']}
-              theme={isMobile ? 'dark' : 'default'}
+              defaultSelectedKeys={['sub0']}
+              theme="dark"
             >
               {navChildren}
             </Menu>

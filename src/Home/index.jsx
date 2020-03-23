@@ -6,27 +6,26 @@ import { enquireScreen } from 'enquire-js';
 import Nav0 from './Nav0';
 import Banner0 from './Banner0';
 import Content0 from './Content0';
-import Content7 from './Content7';
-import Content13 from './Content13';
-import Content12 from './Content12';
+import Content1 from './Content1';
+import Content3 from './Content3';
 import Footer0 from './Footer0';
 
 import {
   Nav00DataSource,
   Banner00DataSource,
   Content00DataSource,
-  Content70DataSource,
-  Content130DataSource,
-  Content120DataSource,
-  Footer00DataSource,
-} from './data.source.js';
+  Content10DataSource,
+  Content30DataSource,
+  Footer01DataSource,
+} from './data.source';
+import './less/antMotionStyle.less';
 
 let isMobile;
 enquireScreen((b) => {
   isMobile = b;
 });
 
-const location = window.location;
+const { location } = window;
 
 export default class Home extends React.Component {
   constructor(props) {
@@ -75,28 +74,22 @@ export default class Home extends React.Component {
         dataSource={Content00DataSource}
         isMobile={this.state.isMobile}
       />,
-      <Content7
-        id="Content7_0"
-        key="Content7_0"
-        dataSource={Content70DataSource}
+      <Content1
+        id="Content1_0"
+        key="Content1_0"
+        dataSource={Content10DataSource}
         isMobile={this.state.isMobile}
       />,
-      <Content13
-        id="Content13_0"
-        key="Content13_0"
-        dataSource={Content130DataSource}
-        isMobile={this.state.isMobile}
-      />,
-      <Content12
-        id="Content12_0"
-        key="Content12_0"
-        dataSource={Content120DataSource}
+      <Content3
+        id="Content3_0"
+        key="Content3_0"
+        dataSource={Content30DataSource}
         isMobile={this.state.isMobile}
       />,
       <Footer0
-        id="Footer0_0"
-        key="Footer0_0"
-        dataSource={Footer00DataSource}
+        id="Footer0_1"
+        key="Footer0_1"
+        dataSource={Footer01DataSource}
         isMobile={this.state.isMobile}
       />,
     ];

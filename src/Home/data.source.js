@@ -1,5 +1,4 @@
 import React from 'react';
-
 export const Nav00DataSource = {
   wrapper: { className: 'header0 home-page-wrapper' },
   page: { className: 'home-page' },
@@ -10,10 +9,90 @@ export const Nav00DataSource = {
   Menu: {
     className: 'header0-menu',
     children: [
-      { name: 'item0', a: { children: '导航一', href: '' } },
-      { name: 'item1', a: { children: '导航二', href: '' } },
-      { name: 'item2', a: { children: '导航三', href: '' } },
-      { name: 'item3', a: { children: '导航四', href: '' } },
+      {
+        name: 'item0',
+        className: 'header0-item',
+        children: {
+          href: '#',
+          children: [{ children: '导航一', name: 'text' }],
+        },
+        subItem: [
+          {
+            name: 'sub0',
+            className: 'item-sub',
+            children: {
+              className: 'item-sub-item',
+              children: [
+                {
+                  name: 'image0',
+                  className: 'item-image',
+                  children:
+                    'https://gw.alipayobjects.com/zos/rmsportal/ruHbkzzMKShUpDYMEmHM.svg',
+                },
+                {
+                  name: 'title',
+                  className: 'item-title',
+                  children: 'Ant Design',
+                },
+                {
+                  name: 'content',
+                  className: 'item-content',
+                  children: '企业级 UI 设计体系',
+                },
+              ],
+            },
+          },
+          {
+            name: 'sub1',
+            className: 'item-sub',
+            children: {
+              className: 'item-sub-item',
+              children: [
+                {
+                  name: 'image0',
+                  className: 'item-image',
+                  children:
+                    'https://gw.alipayobjects.com/zos/rmsportal/ruHbkzzMKShUpDYMEmHM.svg',
+                },
+                {
+                  name: 'title',
+                  className: 'item-title',
+                  children: 'Ant Design',
+                },
+                {
+                  name: 'content',
+                  className: 'item-content',
+                  children: '企业级 UI 设计体系',
+                },
+              ],
+            },
+          },
+        ],
+      },
+      {
+        name: 'item1',
+        className: 'header0-item',
+        children: {
+          href: '#',
+          children: [{ children: '导航二', name: 'text' }],
+        },
+      },
+      {
+        name: 'item2',
+        className: 'header0-item',
+        children: {
+          href: '#',
+          children: [{ children: '导航三', name: 'text' }],
+        },
+      },
+      {
+        name: 'item3',
+        className: 'header0-item',
+        children: {
+          href: '#',
+          children: [{ children: '导航四', name: 'text' }],
+        },
+      },
     ],
   },
   mobileMenu: { className: 'header0-mobile-menu' },
@@ -27,12 +106,7 @@ export const Banner00DataSource = {
   },
   content: {
     className: 'banner0-content',
-    children: (
-      <span>
-        <p>dsdf</p>
-        <p>aaaaa</p>
-      </span>
-    ),
+    children: '一个高效的页面动画解决方案',
   },
   button: { className: 'banner0-button', children: 'Learn More' },
 };
@@ -44,61 +118,106 @@ export const Content00DataSource = {
     className: 'title-wrapper',
     children: [{ name: 'title', children: '产品与服务' }],
   },
-  block: {
-    className: 'block-wrapper',
+  childWrapper: {
+    className: 'content0-block-wrapper',
     children: [
       {
         name: 'block0',
-        className: 'block',
+        className: 'content0-block',
         md: 8,
         xs: 24,
         children: {
-          icon: {
-            className: 'icon',
-            children:
-              'https://zos.alipayobjects.com/rmsportal/WBnVOjtIlGWbzyQivuyq.png',
-          },
-          title: { children: '一站式业务接入' },
-          content: { children: '支付、结算、核算接入产品效率翻四倍' },
+          className: 'content0-block-item',
+          children: [
+            {
+              name: 'image',
+              className: 'content0-block-icon',
+              children:
+                'https://zos.alipayobjects.com/rmsportal/WBnVOjtIlGWbzyQivuyq.png',
+            },
+            {
+              name: 'title',
+              className: 'content0-block-title',
+              children: '一站式业务接入',
+            },
+            { name: 'content', children: '支付、结算、核算接入产品效率翻四倍' },
+          ],
         },
       },
       {
         name: 'block1',
-        className: 'block',
+        className: 'content0-block',
         md: 8,
         xs: 24,
         children: {
-          icon: {
-            className: 'icon',
-            children:
-              'https://zos.alipayobjects.com/rmsportal/YPMsLQuCEXtuEkmXTTdk.png',
-          },
-          title: { children: '一站式事中风险监控' },
-          content: { children: '在所有需求配置环节事前风险控制和质量控制能力' },
+          className: 'content0-block-item',
+          children: [
+            {
+              name: 'image',
+              className: 'content0-block-icon',
+              children:
+                'https://zos.alipayobjects.com/rmsportal/YPMsLQuCEXtuEkmXTTdk.png',
+            },
+            {
+              name: 'title',
+              className: 'content0-block-title',
+              children: '一站式事中风险监控',
+            },
+            {
+              name: 'content',
+              children: '在所有需求配置环节事前风险控制和质量控制能力',
+            },
+          ],
         },
       },
       {
         name: 'block2',
-        className: 'block',
+        className: 'content0-block',
         md: 8,
         xs: 24,
         children: {
-          icon: {
-            className: 'icon',
-            children:
-              'https://zos.alipayobjects.com/rmsportal/EkXWVvAaFJKCzhMmQYiX.png',
-          },
-          title: { children: '一站式数据运营' },
-          content: { children: '沉淀产品接入效率和运营小二工作效率数据' },
+          className: 'content0-block-item',
+          children: [
+            {
+              name: 'image',
+              className: 'content0-block-icon',
+              children:
+                'https://zos.alipayobjects.com/rmsportal/EkXWVvAaFJKCzhMmQYiX.png',
+            },
+            {
+              name: 'title',
+              className: 'content0-block-title',
+              children: '一站式数据运营',
+            },
+            {
+              name: 'content',
+              children: '沉淀产品接入效率和运营小二工作效率数据',
+            },
+          ],
         },
       },
     ],
   },
 };
-export const Content70DataSource = {
-  wrapper: { className: 'home-page-wrapper content7-wrapper' },
-  page: { className: 'home-page content7' },
-  OverPack: {},
+export const Content10DataSource = {
+  wrapper: { className: 'home-page-wrapper content1-wrapper' },
+  OverPack: { className: 'home-page content1', playScale: 0.3 },
+  imgWrapper: { className: 'content1-img', md: 10, xs: 24 },
+  img: {
+    children: 'https://zos.alipayobjects.com/rmsportal/nLzbeGQLPyBJoli.png',
+  },
+  textWrapper: { className: 'content1-text', md: 14, xs: 24 },
+  title: { className: 'content1-title', children: '企业资源管理' },
+  content: {
+    className: 'content1-content',
+    children:
+      '云资源集中编排、弹性伸缩、持续发布和部署，高可用及容灾。云资源集中编排、弹性伸缩、持续发布和部署，高可用及容灾。云资源集中编排、弹性伸缩、持续发布和部署，高可用及容灾。',
+  },
+};
+export const Content30DataSource = {
+  wrapper: { className: 'home-page-wrapper content3-wrapper' },
+  page: { className: 'home-page content3' },
+  OverPack: { playScale: 0.3 },
   titleWrapper: {
     className: 'title-wrapper',
     children: [
@@ -107,266 +226,148 @@ export const Content70DataSource = {
         children: '蚂蚁金融云提供专业的服务',
         className: 'title-h1',
       },
-      { name: 'content', children: '基于阿里云计算强大的基础资源' },
-    ],
-  },
-  tabsWrapper: { className: 'content7-tabs-wrapper' },
-  block: {
-    children: [
-      {
-        name: 'block0',
-        tag: {
-          className: 'content7-tag',
-          text: { children: 'PHONE', className: 'content7-tag-name' },
-          icon: { children: 'mobile' },
-        },
-        content: {
-          className: 'content7-content',
-          text: {
-            className: 'content7-text',
-            md: 14,
-            xs: 24,
-            children: (
-              <span>
-                <h3>技术</h3>
-                <p>
-                  丰富的技术组件，简单组装即可快速搭建金融级应用，丰富的技术组件，简单组装即可快速搭建金融级应用。
-                </p>
-                <br />
-                <h3>融合</h3>
-                <p>
-                  解放业务及技术生产力，推动金融服务底层创新，推动金融服务底层创新。解放业务及技术生产力，推动金融服务底层创新。
-                </p>
-                <br />
-                <h3>
-                  开放
-                </h3>
-                符合金融及要求的安全可靠、高可用、高性能的服务能力，符合金融及要求的安全可靠、高可用、高性能的服务能力。
-              </span>
-            ),
-          },
-          img: {
-            className: 'content7-img',
-            children:
-              'https://zos.alipayobjects.com/rmsportal/xBrUaDROgtFBRRL.png',
-            md: 10,
-            xs: 24,
-          },
-        },
-      },
-      {
-        name: 'block1',
-        tag: {
-          className: 'content7-tag',
-          icon: { children: 'tablet' },
-          text: { className: 'content7-tag-name', children: 'TABLET' },
-        },
-        content: {
-          className: 'content7-content',
-          text: {
-            className: 'content7-text',
-            md: 14,
-            xs: 24,
-            children: (
-              <span>
-                <h3>技术</h3>
-                <p>
-                  丰富的技术组件，简单组装即可快速搭建金融级应用，丰富的技术组件，简单组装即可快速搭建金融级应用。
-                </p>
-                <br />
-                <h3>融合</h3>
-                <p>
-                  解放业务及技术生产力，推动金融服务底层创新，推动金融服务底层创新。解放业务及技术生产力，推动金融服务底层创新。
-                </p>
-                <br />
-                <h3>
-                  开放
-                </h3>
-                符合金融及要求的安全可靠、高可用、高性能的服务能力，符合金融及要求的安全可靠、高可用、高性能的服务能力。
-              </span>
-            ),
-          },
-          img: {
-            className: 'content7-img',
-            md: 10,
-            xs: 24,
-            children:
-              'https://zos.alipayobjects.com/rmsportal/xBrUaDROgtFBRRL.png',
-          },
-        },
-      },
-      {
-        name: 'block2',
-        tag: {
-          className: 'content7-tag',
-          text: { children: 'DESKTOP', className: 'content7-tag-name' },
-          icon: { children: 'laptop' },
-        },
-        content: {
-          className: 'content7-content',
-          text: {
-            className: 'content7-text',
-            md: 14,
-            xs: 24,
-            children: (
-              <span>
-                <h3>技术</h3>
-                <p>
-                  丰富的技术组件，简单组装即可快速搭建金融级应用，丰富的技术组件，简单组装即可快速搭建金融级应用。
-                </p>
-                <br />
-                <h3>融合</h3>
-                <p>
-                  解放业务及技术生产力，推动金融服务底层创新，推动金融服务底层创新。解放业务及技术生产力，推动金融服务底层创新。
-                </p>
-                <br />
-                <h3>
-                  开放
-                </h3>
-                符合金融及要求的安全可靠、高可用、高性能的服务能力，符合金融及要求的安全可靠、高可用、高性能的服务能力。
-              </span>
-            ),
-          },
-          img: {
-            className: 'content7-img',
-            md: 10,
-            xs: 24,
-            children:
-              'https://zos.alipayobjects.com/rmsportal/xBrUaDROgtFBRRL.png',
-          },
-        },
-      },
-    ],
-  },
-};
-export const Content130DataSource = {
-  OverPack: {
-    className:
-      'home-page-wrapper content13-wrapper home-page-wrapper content13-wrapper jnwq7vhwgqg-editor_css',
-    playScale: 0.3,
-  },
-  titleWrapper: {
-    className: 'title-wrapper',
-    children: [
-      { name: 'title', children: '丰富的特色展台', className: 'title-h1' },
       {
         name: 'content',
-        children:
-          '特色展台包括 Ant Design 、AntV、AntG、Egg 等明星产品，更有产品专家',
         className: 'title-content',
-      },
-      {
-        name: 'content2',
-        children: '现场问诊，为你答疑解难',
-        className: 'title-content',
+        children: '基于阿里云强大的基础资源',
       },
     ],
   },
-};
-export const Content120DataSource = {
-  wrapper: { className: 'home-page-wrapper content12-wrapper' },
-  page: { className: 'home-page content12' },
-  OverPack: { playScale: 0.3, className: '' },
-  titleWrapper: {
-    className: 'title-wrapper',
-    children: [{ name: 'title', children: '特别鸣谢', className: 'title-h1' }],
-  },
   block: {
-    className: 'img-wrapper',
+    className: 'content3-block-wrapper',
     children: [
       {
         name: 'block0',
-        className: 'block',
+        className: 'content3-block',
         md: 8,
         xs: 24,
         children: {
-          wrapper: { className: 'block-content' },
-          img: {
+          icon: {
+            className: 'content3-icon',
             children:
-              'https://gw.alipayobjects.com/zos/rmsportal/TFicUVisNHTOEeMYXuQF.svg',
+              'https://zos.alipayobjects.com/rmsportal/ScHBSdwpTkAHZkJ.png',
+          },
+          textWrapper: { className: 'content3-text' },
+          title: { className: 'content3-title', children: '企业资源管理' },
+          content: {
+            className: 'content3-content',
+            children:
+              '云资源集中编排、弹性伸缩、持续发布和部署，高可用及容灾。',
           },
         },
       },
       {
         name: 'block1',
-        className: 'block',
+        className: 'content3-block',
         md: 8,
         xs: 24,
         children: {
-          wrapper: { className: 'block-content' },
-          img: {
+          icon: {
+            className: 'content3-icon',
             children:
-              'https://gw.alipayobjects.com/zos/rmsportal/hkLGkrlCEkGZeMQlnEkD.svg',
+              'https://zos.alipayobjects.com/rmsportal/NKBELAOuuKbofDD.png',
+          },
+          textWrapper: { className: 'content3-text' },
+          title: { className: 'content3-title', children: '云安全' },
+          content: {
+            className: 'content3-content',
+            children:
+              '按金融企业安全要求打造的完整云上安全体系，全方位保障金融应用及数据安全。',
           },
         },
       },
       {
         name: 'block2',
-        className: 'block',
+        className: 'content3-block',
         md: 8,
         xs: 24,
         children: {
-          wrapper: { className: 'block-content' },
-          img: {
+          icon: {
+            className: 'content3-icon',
             children:
-              'https://gw.alipayobjects.com/zos/rmsportal/bqyPRSZmhvrsfJrBvASi.svg',
+              'https://zos.alipayobjects.com/rmsportal/xMSBjgxBhKfyMWX.png',
+          },
+          textWrapper: { className: 'content3-text' },
+          title: { className: 'content3-title', children: '云监控' },
+          content: {
+            className: 'content3-content',
+            children:
+              '分布式云环境集中监控，统一资源及应用状态视图，智能分析及故障定位。',
           },
         },
       },
       {
         name: 'block3',
-        className: 'block',
+        className: 'content3-block',
         md: 8,
         xs: 24,
         children: {
-          wrapper: { className: 'block-content' },
-          img: {
+          icon: {
+            className: 'content3-icon',
             children:
-              'https://gw.alipayobjects.com/zos/rmsportal/UcsyszzOabdCYDkoPPnM.svg',
+              'https://zos.alipayobjects.com/rmsportal/MNdlBNhmDBLuzqp.png',
+          },
+          textWrapper: { className: 'content3-text' },
+          title: { className: 'content3-title', children: '移动' },
+          content: {
+            className: 'content3-content',
+            children:
+              '一站式移动金融APP开发及全面监控；丰富可用组件，动态发布和故障热修复。',
           },
         },
       },
       {
         name: 'block4',
-        className: 'block',
+        className: 'content3-block',
         md: 8,
         xs: 24,
         children: {
-          wrapper: { className: 'block-content' },
-          img: {
+          icon: {
+            className: 'content3-icon',
             children:
-              'https://gw.alipayobjects.com/zos/rmsportal/kRBeaICGexAmVjqBEqgw.svg',
+              'https://zos.alipayobjects.com/rmsportal/UsUmoBRyLvkIQeO.png',
+          },
+          textWrapper: { className: 'content3-text' },
+          title: { className: 'content3-title', children: '分布式中间件' },
+          content: {
+            className: 'content3-content',
+            children:
+              '金融级联机交易处理中间件，大规模分布式计算机，数万笔/秒级并发能力，严格保证交易数据统一性。',
           },
         },
       },
       {
         name: 'block5',
-        className: 'block',
+        className: 'content3-block',
         md: 8,
         xs: 24,
         children: {
-          wrapper: { className: 'block-content' },
-          img: {
+          icon: {
+            className: 'content3-icon',
             children:
-              'https://gw.alipayobjects.com/zos/rmsportal/ftBIiyJcCHpHEioRvPsV.svg',
+              'https://zos.alipayobjects.com/rmsportal/ipwaQLBLflRfUrg.png',
+          },
+          textWrapper: { className: 'content3-text' },
+          title: { className: 'content3-title', children: '大数据' },
+          content: {
+            className: 'content3-content',
+            children:
+              '一站式、全周期大数据协同工作平台，PB级数据处理、毫秒级数据分析工具。',
           },
         },
       },
     ],
   },
 };
-export const Footer00DataSource = {
+export const Footer01DataSource = {
   wrapper: { className: 'home-page-wrapper footer0-wrapper' },
   OverPack: { className: 'home-page footer0', playScale: 0.05 },
   copyright: {
     className: 'copyright',
     children: (
       <span>
-        ©2018
-        {' '}
-        <a href="https://motion.ant.design">Ant Motion</a>
-        {' '}
-        All Rights Reserved
+        ©2018 <a href="https://motion.ant.design">Ant Motion</a> All Rights
+        Reserved
       </span>
     ),
   },

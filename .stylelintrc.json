@@ -4,6 +4,7 @@
     "declaration-empty-line-before": null,
     "no-descending-specificity": null,
     "selector-pseudo-class-no-unknown": null,
-    "selector-pseudo-element-colon-notation": null
+    "selector-pseudo-element-colon-notation": null,
+    "no-empty-source": null
   }
 }

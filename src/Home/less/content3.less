@@ -1,0 +1,52 @@
+@content3: content3;
+.@{content3}-wrapper {
+  min-height: 764px;
+  .@{content3} {
+    height: 100%;
+    overflow: hidden;
+    & .title-content {
+      text-align: center;
+    }
+    &-block-wrapper {
+      position: relative;
+      .@{content3}-block {
+        display: inline-block;
+        padding: 48px 24px;
+        vertical-align: top;
+        .@{content3}-icon {
+          display: inline-block;
+          width: 15%;
+          vertical-align: top;
+        }
+        .@{content3}-text {
+          width: 85%;
+          display: inline-block;
+          padding-left: 8%;
+        }
+        &.clear-both {
+          clear: both;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .@{content3}-wrapper {
+    min-height: 1080px;
+    .@{content3} {
+      &-block-wrapper {
+        margin: 20px auto;
+        height: auto;
+        .@{content3}-block {
+          .@{content3}-title {
+            font-size: 20px;
+          }
+          &.queue-anim-leaving {
+            position: relative !important;
+          }
+        }
+      }
+    }
+  }
+}
