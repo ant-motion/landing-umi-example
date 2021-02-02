@@ -1,6 +1,5 @@
 {
   "name": "landing-test",
-  "private": true,
   "scripts": {
     "start": "umi dev",
     "build": "umi build",
@@ -35,9 +34,9 @@
     "stylelint": "^9.4.0",
     "stylelint-config-prettier": "^4.0.0",
     "stylelint-config-standard": "^18.0.0",
-    "umi-plugin-react": "^1.2.0"
+    "@umijs/preset-react": "^1.7.13",
+    "umi": "^3"
   },
   "pre-commit": [
-    "lint"
   ]
 }

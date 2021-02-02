@@ -2,7 +2,7 @@ import React from 'react';
 import { findDOMNode } from 'react-dom';
 import TweenOne from 'rc-tween-one';
 import { Menu } from 'antd';
-import NavLink from 'umi/navlink';
+import { NavLink } from 'umi';
 
 const Item = Menu.Item;
 
