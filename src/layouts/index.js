@@ -7,6 +7,7 @@ import Footer from "./Footer0";
 
 import { Nav00DataSource, Footer00DataSource } from "./data.source.js";
 
+let isMobile;
 enquireScreen((b) => {
   isMobile = b;
 });
@@ -17,7 +18,7 @@ const animate = {
 };
 
 export default withRouter(({ children, location }) => {
-  const [isMobile, setIsMobile] = useState(false);
+  const [mobile, setIsMobile] = useState(isMobile);
   useEffect(() => {
     enquireScreen((b) => {
       setIsMobile(!!b);
@@ -32,7 +33,7 @@ export default withRouter(({ children, location }) => {
 
   return (
     <div>
-      <Header dataSource={Nav00DataSource} isMobile={isMobile} />
+      <Header dataSource={Nav00DataSource} isMobile={mobile} />
       <TweenOneGroup
         enter={[
           { type: "set", zIndex: key === "index" ? 0 : 1 },
@@ -46,7 +47,7 @@ export default withRouter(({ children, location }) => {
           <Switch location={location}>{children.props.children}</Switch>
         </div>
       </TweenOneGroup>
-      <Footer dataSource={Footer00DataSource} isMobile={isMobile} />
+      <Footer dataSource={Footer00DataSource} isMobile={mobile} />
     </div>
   );
 });
